@@ -1,17 +1,22 @@
 var StateUtils = Class.create();
+StateUtils.CLINICAL_TYPE = 'CLINICAL_TYPE';
+StateUtils.FACILITIES_TYPE = 'FACILITIES_TYPE';
+StateUtils.LAB_TYPE = 'LAB_TYPE';
+StateUtils.MANUFACTURING_TYPE = 'MANUFACTURING_TYPE';
+
 StateUtils.prototype = {
     type: 'StateUtils',
     initialize: function(type) {
-        if (type == "clinical") {
+        if (type == StateUtils.CLINICAL_TYPE) {
             this.DEVICE_TABLE = "x_nuvo_eam_clinical_devices";
             this.WORK_ORDER_TABLE = "x_nuvo_eam_clinical_work_orders";
-        } else if (type == "facilities") {
+        } else if (type == StateUtils.FACILITIES_TYPE) {
             this.DEVICE_TABLE = "x_nuvo_eam_facilities_devices";
             this.WORK_ORDER_TABLE = "x_nuvo_eam_facilities_work_orders";
-        } else if (type == "lab") {
+        } else if (type == StateUtils.LAB_TYPE) {
             this.DEVICE_TABLE = "x_nuvo_eam_lab_devices";
             this.WORK_ORDER_TABLE = "x_nuvo_eam_lab_work_orders";
-        } else if (type == "manufacturing") {
+        } else if (type == StateUtils.MANUFACTURING_TYPE) {
             this.DEVICE_TABLE = "x_nuvo_eam_manufacturing_devices";
             this.WORK_ORDER_TABLE = "x_nuvo_eam_manufacturing_work_orders";
         } 
