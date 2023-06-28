@@ -16,7 +16,7 @@ StateUtils.prototype = {
             this.WORK_ORDER_TABLE = "x_nuvo_eam_manufacturing_work_orders";
         } 
     },
-    DeviceUpdateStateConfig: function(encodedQueryOp) {
+    deviceUpdateStateConfig: function(encodedQueryOp) {
         var allDevicesGR = new GlideRecord(this.DEVICE_TABLE);
         if (encodedQueryOp)
             allDevicesGR.addEncodedQuery(encodedQueryOp);
@@ -38,7 +38,7 @@ StateUtils.prototype = {
         deleteTmpGR.get(tmpGR.sys_id.toString() + "");
         deleteTmpGR.deleteRecord();
     },
-    WorkOrderUpdateStateConfig: function(workOrderTypeID, encodedQueryOp) {
+    workOrderUpdateStateConfig: function(workOrderTypeID, encodedQueryOp) {
         if (!workOrderTypeID) return; // WORK ORDER TYPE SYS_ID IS MANDATORY!! example: 0658985edbe38010f48662eb8a96198b
         
         var allWorkOrdersGR = new GlideRecord(this.WORK_ORDER_TABLE);
