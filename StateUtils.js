@@ -1,5 +1,5 @@
 var StateUtils = Class.create();
-StateUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+StateUtils.prototype = {
     type: 'StateUtils',
     initialize: function(type) {
         if (type == "clinical") {
@@ -75,4 +75,4 @@ StateUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         deleteTmpDeviceGR.get(tmpDeviceGR.sys_id.toString() + "");
         deleteTmpDeviceGR.deleteRecord();
     },
-});
+};
