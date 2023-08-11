@@ -54,7 +54,8 @@ var type = x_nuvo_eam.StateUtils.CLINICAL_TYPE;
 // var type = x_nuvo_eam.StateUtils.MANUFACTURING_TYPE;
 
 var utils = new x_nuvo_eam.StateUtils(type);
-utils.workOrderUpdateStateConfig();
+var workOrderTypeID = 'ftwretrwe12faftest';
+utils.workOrderUpdateStateConfig(workOrderTypeID);
 ```
 
 Update some Work Orders:
@@ -69,7 +70,8 @@ var type = x_nuvo_eam.StateUtils.CLINICAL_TYPE;
 var encodedQuery = "test=123^random=hi";
 
 var utils = new x_nuvo_eam.StateUtils(type);
-utils.workOrderUpdateStateConfig(encodedQuery);
+var workOrderTypeID = 'ftwretrwe12faftest';
+utils.workOrderUpdateStateConfig(workOrderTypeID, encodedQuery);
 ```
 
 ## Author
